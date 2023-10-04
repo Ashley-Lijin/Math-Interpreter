@@ -1,3 +1,7 @@
+from lexer import Lexer
+
 while True:
     text = input('>>> ')
-    print(text)
+    lexer = Lexer(text)
+    tokens = lexer.generate_tokens()
+    print(list(tokens))
